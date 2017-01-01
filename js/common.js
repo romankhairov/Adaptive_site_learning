@@ -4,6 +4,10 @@ $(document).ready(function() {
 		$(this).next().slideToggle();
 	});
 
+	$(".main_menu_button").click(function() {
+		$(".main_menu ul").slideToggle();
+	});
+
 
 	//coutdown timer
 	var austDay = new Date($(".countdown").attr("date-time"));
@@ -34,7 +38,8 @@ $(document).ready(function() {
 	//Owl caousel
 	var owl = $(".carousel");
 	owl.owlCarousel({
-		items : 4
+		items : 1,
+		autoHeight : true
 	});
 	owl.on("mousewheel", ".owl-wrapper", function (e) {
 		if (e.deltaY > 0) {
